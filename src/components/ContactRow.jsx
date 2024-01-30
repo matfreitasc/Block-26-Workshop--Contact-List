@@ -1,7 +1,7 @@
-const ContactRow = ({ contact }) => {
+const ContactRow = ({ contact, setSelectedContactId }) => {
 	console.log(contact)
 	return (
-		<tr>
+		<tr onClick={() => setSelectedContactId(contact.id)} className='pointer'>
 			<td>{contact.name}</td>
 			<td>{contact.email}</td>
 			<td>{contact.phone}</td>
